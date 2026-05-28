@@ -1,0 +1,477 @@
+
+<header class="dcg-header" id="dcgHeader">
+
+  <div class="dcg-header-container">
+
+    <!-- LOGO -->
+
+    <a href="/" class="dcg-logo-wrap">
+      <img 
+        src="http://decadescapitalgroup.com/wp-content/uploads/2025/09/cropped-cropped-Decades-Capital-Group-Logo.png"
+        alt="Decades Capital Group"
+        class="dcg-logo"
+      >
+    </a>
+
+    <!-- NAVIGATION -->
+
+    <nav class="dcg-nav">
+
+      <ul class="dcg-nav-menu">
+
+        <li>
+          <a href="#" class="active">Home</a>
+        </li>
+
+        <li>
+          <a href="#">About Us</a>
+        </li>
+
+        <li class="dcg-dropdown">
+
+          <a href="#">
+            Opportunities
+
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+          </a>
+
+        </li>
+
+        <li>
+          <a href="#">Contact</a>
+        </li>
+
+      </ul>
+
+    </nav>
+
+    <!-- CTA -->
+
+    <a href="#" class="dcg-header-btn">
+      INVESTOR PORTAL
+    </a>
+
+    <!-- MOBILE MENU -->
+
+    <button class="dcg-mobile-toggle" id="dcgMobileToggle">
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+  </div>
+
+  <!-- MOBILE NAV -->
+
+  <div class="dcg-mobile-menu" id="dcgMobileMenu">
+
+    <a href="#">Home</a>
+    <a href="#">About Us</a>
+    <a href="#">Opportunities</a>
+    <a href="#">Contact</a>
+
+    <a href="#" class="dcg-mobile-btn">
+      INVESTOR PORTAL
+    </a>
+
+  </div>
+
+</header>
+
+<style>
+
+/* =========================
+   FORCE COLORS
+========================= */
+
+#dcgHeader,
+#dcgHeader *{
+  box-sizing:border-box;
+}
+
+/* =========================
+   ROOT VARIABLES
+========================= */
+
+:root{
+  --dcg-gold:#916B1D;
+  --dcg-dark:#121519;
+  --dcg-white:#FFFFFF;
+  --dcg-text:#D5D7DA;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+#dcgHeader.dcg-header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:99999;
+
+  background:transparent;
+
+  transition:
+    background .45s ease,
+    backdrop-filter .45s ease,
+    padding .45s ease,
+    box-shadow .45s ease;
+
+  padding:18px 0;
+
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+/* SCROLLED */
+
+#dcgHeader.scrolled{
+  background:#121519 !important;
+
+  backdrop-filter:blur(14px);
+
+  box-shadow:
+    0 8px 28px rgba(0,0,0,0.28);
+
+  border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+#dcgHeader .dcg-header-container{
+  width:100%;
+  max-width:1320px;
+
+  margin:0 auto;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:0 28px;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+#dcgHeader .dcg-logo-wrap{
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+}
+
+#dcgHeader .dcg-logo{
+  width:auto;
+  height:48px;
+  object-fit:contain;
+  display:block;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+#dcgHeader .dcg-nav{
+  display:flex;
+  align-items:center;
+}
+
+#dcgHeader .dcg-nav-menu{
+  display:flex;
+  align-items:center;
+  gap:46px;
+
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+#dcgHeader .dcg-nav-menu li{
+  position:relative;
+}
+
+#dcgHeader .dcg-nav-menu li a{
+  position:relative;
+
+  color:#D7D9DC !important;
+
+  text-decoration:none !important;
+
+  font-size:17px;
+  font-weight:500;
+  font-family:"Inter",sans-serif;
+
+  transition:
+    color .3s ease;
+
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+/* ACTIVE */
+
+#dcgHeader .dcg-nav-menu li a.active{
+  color:#916B1D !important;
+}
+
+/* HOVER */
+
+#dcgHeader .dcg-nav-menu li a:hover{
+  color:#916B1D !important;
+}
+
+/* UNDERLINE */
+
+#dcgHeader .dcg-nav-menu li a::after{
+  content:"";
+
+  position:absolute;
+  left:0;
+  bottom:-8px;
+
+  width:0%;
+  height:1px;
+
+  background:#916B1D;
+
+  transition:width .35s ease;
+}
+
+#dcgHeader .dcg-nav-menu li a:hover::after,
+#dcgHeader .dcg-nav-menu li a.active::after{
+  width:100%;
+}
+
+/* DROPDOWN ICON */
+
+#dcgHeader .dcg-dropdown svg{
+  width:14px;
+  height:14px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+#dcgHeader .dcg-header-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  height:52px;
+
+  padding:0 34px;
+
+  border-radius:999px;
+
+  background:#916B1D !important;
+
+  color:#FFFFFF !important;
+
+  text-decoration:none !important;
+
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:3px;
+
+  font-family:"Inter",sans-serif;
+
+  transition:
+    transform .35s ease,
+    background .35s ease,
+    box-shadow .35s ease;
+}
+
+/* BUTTON HOVER */
+
+#dcgHeader .dcg-header-btn:hover{
+  background:#A67B22 !important;
+
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 10px 26px rgba(145,107,29,0.28);
+}
+
+/* =========================
+   MOBILE TOGGLE
+========================= */
+
+#dcgHeader .dcg-mobile-toggle{
+  display:none;
+
+  width:48px;
+  height:48px;
+
+  border:none;
+  background:none;
+
+  cursor:pointer;
+
+  padding:0;
+}
+
+#dcgHeader .dcg-mobile-toggle span{
+  display:block;
+
+  width:24px;
+  height:2px;
+
+  background:#FFFFFF;
+
+  margin:5px auto;
+
+  transition:.3s ease;
+}
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+#dcgHeader .dcg-mobile-menu{
+  display:none;
+
+  flex-direction:column;
+  gap:20px;
+
+  padding:30px;
+
+  background:#121519;
+
+  border-top:1px solid rgba(255,255,255,0.06);
+}
+
+#dcgHeader .dcg-mobile-menu a{
+  color:#FFFFFF !important;
+
+  text-decoration:none !important;
+
+  font-size:18px;
+  font-family:"Inter",sans-serif;
+}
+
+#dcgHeader .dcg-mobile-btn{
+  margin-top:10px;
+
+  background:#916B1D;
+
+  padding:16px 24px;
+
+  border-radius:999px;
+
+  text-align:center;
+
+  letter-spacing:2px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:1024px){
+
+  #dcgHeader .dcg-nav{
+    display:none;
+  }
+
+  #dcgHeader .dcg-header-btn{
+    display:none;
+  }
+
+  #dcgHeader .dcg-mobile-toggle{
+    display:block;
+  }
+
+  #dcgHeader .dcg-logo{
+    height:42px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:767px){
+
+  #dcgHeader.dcg-header{
+    padding:14px 0;
+  }
+
+  #dcgHeader .dcg-header-container{
+    padding:0 20px;
+  }
+
+  #dcgHeader .dcg-logo{
+    height:36px;
+  }
+
+  #dcgHeader .dcg-mobile-menu{
+    padding:24px 20px 30px;
+  }
+}
+
+</style>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+  const header = document.getElementById("dcgHeader");
+
+  /* =========================
+     SCROLL EFFECT
+  ========================= */
+
+  function handleScroll(){
+
+    if(window.scrollY > 40){
+
+      header.classList.add("scrolled");
+
+    }else{
+
+      header.classList.remove("scrolled");
+
+    }
+
+  }
+
+  window.addEventListener("scroll", handleScroll);
+
+  handleScroll();
+
+  /* =========================
+     MOBILE MENU
+  ========================= */
+
+  const toggle = document.getElementById("dcgMobileToggle");
+
+  const mobileMenu = document.getElementById("dcgMobileMenu");
+
+  toggle.addEventListener("click", function(){
+
+    if(mobileMenu.style.display === "flex"){
+
+      mobileMenu.style.display = "none";
+
+    }else{
+
+      mobileMenu.style.display = "flex";
+
+    }
+
+  });
+
+});
+
+</script>

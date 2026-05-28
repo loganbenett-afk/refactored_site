@@ -1,0 +1,643 @@
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#02070D;
+  overflow-x:hidden;
+  font-family:"Inter",sans-serif;
+}
+
+/* =========================================================
+   ROOT VARIABLES
+========================================================= */
+
+:root{
+  --dcg-gold:#916B1D;
+  --dcg-bg:#02070D;
+  --dcg-bg2:#050B12;
+  --dcg-text:#C4CCD5;
+  --dcg-heading:#F5F1E8;
+  --dcg-border:#1A2734;
+}
+
+/* =========================================================
+   HEADER PLACEHOLDER
+========================================================= */
+
+#header-placeholder{
+  width:100%;
+}
+
+/* =========================================================
+   INVESTOR HERO SECTION
+========================================================= */
+
+#dcgInvestorSection{
+  position:relative;
+  overflow:hidden;
+
+  width:100%;
+
+  padding:180px 24px 120px;
+
+  background:
+    radial-gradient(circle at top center,
+    rgba(145,107,29,0.14),
+    transparent 34%),
+
+    radial-gradient(circle at bottom left,
+    rgba(145,107,29,0.08),
+    transparent 28%),
+
+    linear-gradient(180deg,#02070D 0%, #050B12 100%);
+}
+
+/* GLOW */
+
+#dcgInvestorSection::before{
+  content:"";
+
+  position:absolute;
+
+  top:-300px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  width:1000px;
+  height:1000px;
+
+  background:
+    radial-gradient(circle,
+    rgba(145,107,29,0.14),
+    transparent 70%);
+
+  filter:blur(90px);
+
+  pointer-events:none;
+}
+
+/* GRID */
+
+#dcgInvestorSection::after{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background-image:
+    linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+
+  background-size:80px 80px;
+
+  opacity:.16;
+
+  pointer-events:none;
+}
+
+/* CONTAINER */
+
+.dcg-investor-container{
+  position:relative;
+  z-index:2;
+
+  max-width:1280px;
+  margin:0 auto;
+
+  text-align:center;
+}
+
+/* LABEL */
+
+.dcg-investor-label{
+  display:inline-block;
+
+  margin-bottom:28px;
+
+  color:#916B1D;
+
+  font-size:12px;
+  font-weight:700;
+
+  letter-spacing:5px;
+  text-transform:uppercase;
+
+  opacity:0;
+  transform:translateY(20px);
+
+  animation:dcgFadeUp .9s ease forwards;
+}
+
+/* TITLE */
+
+.dcg-investor-title{
+  margin:0;
+
+  color:#F5F1E8;
+
+  font-size:clamp(58px,7vw,112px);
+
+  line-height:1.02;
+
+  letter-spacing:-3px;
+
+  font-family:"Playfair Display",serif;
+
+  font-weight:400;
+
+  opacity:0;
+  transform:translateY(30px);
+
+  animation:dcgFadeUp 1s ease forwards;
+
+  animation-delay:.15s;
+}
+
+.dcg-investor-title span{
+  color:#916B1D;
+
+  font-style:italic;
+}
+
+/* DESCRIPTION */
+
+.dcg-investor-description{
+  max-width:980px;
+
+  margin:42px auto 0;
+
+  color:#C4CCD5;
+
+  font-size:24px;
+
+  line-height:1.85;
+
+  opacity:0;
+  transform:translateY(35px);
+
+  animation:dcgFadeUp 1s ease forwards;
+
+  animation-delay:.3s;
+}
+
+/* =========================================================
+   CONTACT SECTION
+========================================================= */
+
+#dcgContactSection{
+  position:relative;
+
+  overflow:hidden;
+
+  width:100%;
+
+  padding:40px 24px 140px;
+
+  background:
+    radial-gradient(circle at top left,
+    rgba(145,107,29,0.10),
+    transparent 30%),
+
+    linear-gradient(180deg,#02070D 0%, #050A11 100%);
+}
+
+/* CONTAINER */
+
+.dcg-contact-container{
+  position:relative;
+  z-index:2;
+
+  max-width:1280px;
+  margin:0 auto;
+
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+
+  gap:34px;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.dcg-form-wrapper{
+  border:1px solid #1A2734;
+
+  padding:34px;
+
+  background:rgba(3,9,15,0.45);
+
+  backdrop-filter:blur(10px);
+}
+
+.dcg-contact-form{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
+
+/* ROW */
+
+.dcg-form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+
+/* FIELD */
+
+.dcg-field{
+  display:flex;
+  flex-direction:column;
+}
+
+.dcg-field label{
+  margin-bottom:12px;
+
+  color:#916B1D;
+
+  font-size:11px;
+  font-weight:700;
+
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.dcg-field label span{
+  color:#8C97A3;
+
+  letter-spacing:0;
+  text-transform:none;
+}
+
+/* INPUTS */
+
+.dcg-field input,
+.dcg-field textarea{
+  width:100%;
+
+  border:1px solid #1D2A37;
+
+  background:#020911;
+
+  color:#FFFFFF;
+
+  padding:18px;
+
+  outline:none;
+
+  font-size:15px;
+
+  transition:
+    border-color .3s ease,
+    box-shadow .3s ease;
+}
+
+.dcg-field input:focus,
+.dcg-field textarea:focus{
+  border-color:#916B1D;
+
+  box-shadow:
+    0 0 0 1px rgba(145,107,29,0.4);
+}
+
+.dcg-field textarea{
+  min-height:140px;
+  resize:vertical;
+}
+
+.dcg-field input::placeholder,
+.dcg-field textarea::placeholder{
+  color:#66717D;
+}
+
+/* HELPER */
+
+.dcg-helper{
+  margin-top:8px;
+
+  color:#798491;
+
+  font-size:12px;
+}
+
+/* =========================================================
+   TOGGLE
+========================================================= */
+
+.dcg-toggle-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.dcg-toggle-btn{
+  height:54px;
+
+  border:1px solid #1D2A37;
+
+  background:#020911;
+
+  color:#FFFFFF;
+
+  cursor:pointer;
+
+  font-size:14px;
+  font-weight:600;
+
+  letter-spacing:2px;
+
+  transition:all .3s ease;
+}
+
+.dcg-toggle-btn:hover,
+.dcg-toggle-btn.active{
+  border-color:#916B1D;
+
+  background:rgba(145,107,29,0.10);
+
+  color:#916B1D;
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.dcg-submit-btn{
+  width:100%;
+
+  height:62px;
+
+  border:none;
+
+  border-radius:999px;
+
+  background:#916B1D;
+
+  color:#FFFFFF;
+
+  cursor:pointer;
+
+  margin-top:6px;
+
+  font-size:13px;
+  font-weight:700;
+
+  letter-spacing:4px;
+
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    background .35s ease;
+}
+
+.dcg-submit-btn:hover{
+  transform:translateY(-2px);
+
+  background:#A97C23;
+
+  box-shadow:
+    0 14px 34px rgba(145,107,29,0.24);
+}
+
+/* DISCLAIMER */
+
+.dcg-disclaimer{
+  text-align:center;
+
+  color:#73808D;
+
+  font-size:12px;
+
+  line-height:1.8;
+}
+
+/* =========================================================
+   RIGHT INFO
+========================================================= */
+
+.dcg-contact-info{
+  display:flex;
+  flex-direction:column;
+}
+
+.dcg-info-block{
+  padding:0 0 34px;
+
+  margin-bottom:34px;
+
+  border-bottom:1px solid #18232E;
+}
+
+.dcg-info-block:last-child{
+  border-bottom:none;
+  margin-bottom:0;
+  padding-bottom:0;
+}
+
+/* LABEL */
+
+.dcg-info-label{
+  margin-bottom:16px;
+
+  color:#916B1D;
+
+  font-size:11px;
+  font-weight:700;
+
+  letter-spacing:4px;
+  text-transform:uppercase;
+}
+
+/* TITLE */
+
+.dcg-info-title{
+  margin:0 0 16px;
+
+  color:#F5F1E8;
+
+  font-size:36px;
+
+  line-height:1.2;
+
+  font-family:"Playfair Display",serif;
+
+  font-weight:400;
+}
+
+/* TEXT */
+
+.dcg-info-text{
+  color:#C4CDD7;
+
+  font-size:16px;
+
+  line-height:1.9;
+}
+
+/* PHONE */
+
+.dcg-phone-link{
+  margin-top:24px;
+
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+
+  color:#916B1D;
+
+  text-decoration:none;
+
+  font-size:38px;
+
+  font-family:"Playfair Display",serif;
+}
+
+.dcg-phone-link svg{
+  width:22px;
+  height:22px;
+}
+
+/* EMAIL */
+
+.dcg-email-link{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+
+  color:#F5F1E8;
+
+  text-decoration:none;
+
+  font-size:16px;
+}
+
+.dcg-email-link svg{
+  width:18px;
+  height:18px;
+}
+
+/* PORTAL */
+
+.dcg-portal-link{
+  display:inline-block;
+
+  margin-top:16px;
+
+  color:#916B1D;
+
+  text-decoration:none;
+
+  font-size:15px;
+}
+
+/* =========================================================
+   FOOTER PLACEHOLDER
+========================================================= */
+
+#footer-placeholder{
+  width:100%;
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes dcgFadeUp{
+
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:1024px){
+
+  .dcg-contact-container{
+    grid-template-columns:1fr;
+  }
+
+  .dcg-investor-title{
+    font-size:72px;
+  }
+
+  .dcg-investor-description{
+    font-size:20px;
+  }
+
+  .dcg-phone-link{
+    font-size:32px;
+  }
+
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:767px){
+
+  #dcgInvestorSection{
+    padding:140px 20px 90px;
+  }
+
+  #dcgContactSection{
+    padding:20px 20px 90px;
+  }
+
+  .dcg-investor-title{
+    font-size:54px;
+
+    line-height:1.08;
+
+    letter-spacing:-1.5px;
+  }
+
+  .dcg-investor-description{
+    margin-top:26px;
+
+    font-size:16px;
+  }
+
+  .dcg-form-wrapper{
+    padding:24px;
+  }
+
+  .dcg-form-row{
+    grid-template-columns:1fr;
+  }
+
+  .dcg-info-title{
+    font-size:30px;
+  }
+
+  .dcg-phone-link{
+    font-size:26px;
+  }
+
+}
+
