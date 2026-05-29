@@ -1,0 +1,181 @@
+/* ============================================================
+   CASE STUDIES PAGE STYLES
+   ============================================================ */
+
+/* HERO SECTION */
+.dcg-cs-hero {
+  padding: 200px 24px 100px;
+  background: radial-gradient(circle at top right, rgba(224, 164, 59, 0.08), transparent 40%),
+              linear-gradient(180deg, #020812 0%, #040c16 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.dcg-cs-hero-label {
+  display: inline-block;
+  color: #e0a43b;
+  font-size: 11px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.dcg-cs-hero-label::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: #e0a43b;
+  margin: 12px auto 0;
+  opacity: 0.6;
+}
+
+.dcg-cs-hero-title {
+  font-family: "Playfair Display", serif;
+  font-size: 64px;
+  color: #fff;
+  margin: 0 0 24px 0;
+  line-height: 1.1;
+}
+
+.dcg-cs-hero-title span {
+  color: #e0a43b;
+  font-style: italic;
+}
+
+.dcg-cs-hero-text {
+  max-width: 700px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* CASE STUDIES SECTION */
+.dcg-cs-section {
+  padding: 100px 24px;
+  background-color: #040810;
+}
+
+.dcg-cs-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.dcg-cs-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.dcg-cs-card:hover {
+  border-color: rgba(224, 164, 59, 0.3);
+  transform: translateY(-4px);
+}
+
+.dcg-cs-image {
+  background-color: #0a111a;
+  position: relative;
+}
+
+.dcg-cs-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.dcg-cs-badge {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background: #e0a43b;
+  color: #111;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+
+.dcg-cs-content {
+  padding: 48px;
+}
+
+.dcg-cs-title {
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  margin: 0 0 16px 0;
+}
+
+.dcg-cs-location {
+  color: #e0a43b;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 24px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dcg-cs-desc {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0 0 32px 0;
+}
+
+.dcg-cs-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 32px;
+}
+
+.dcg-cs-stat-box p {
+  margin: 0 0 8px 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.dcg-cs-stat-box h4 {
+  margin: 0;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .dcg-cs-card {
+    grid-template-columns: 1fr;
+  }
+  .dcg-cs-image {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dcg-cs-hero {
+    padding: 160px 20px 80px;
+  }
+  .dcg-cs-hero-title {
+    font-size: 42px;
+  }
+  .dcg-cs-content {
+    padding: 32px 24px;
+  }
+}

@@ -5,7 +5,7 @@
 
     <!-- LOGO -->
 
-    <a href="/" class="dcg-logo-wrap">
+    <a href="{{BASE_PATH}}index.html" class="dcg-logo-wrap">
       <img 
         src="http://decadescapitalgroup.com/wp-content/uploads/2025/09/cropped-cropped-Decades-Capital-Group-Logo.png"
         alt="Decades Capital Group"
@@ -20,28 +20,35 @@
       <ul class="dcg-nav-menu">
 
         <li>
-          <a href="#" class="active">Home</a>
+          <a href="{{BASE_PATH}}index.html">Home</a>
         </li>
 
         <li>
-          <a href="#">About Us</a>
-        </li>
-
-        <li class="dcg-dropdown">
-
-          <a href="#">
-            Opportunities
-
-            <svg viewBox="0 0 24 24" fill="none">
-              <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-
-          </a>
-
+          <a href="{{BASE_PATH}}pages/about.html">About Us</a>
         </li>
 
         <li>
-          <a href="#">Contact</a>
+          <a href="{{BASE_PATH}}pages/leadership.html">Leadership</a>
+        </li>
+
+        <li>
+          <a href="{{BASE_PATH}}pages/opportunities.html">Opportunities</a>
+        </li>
+        
+        <li>
+          <a href="{{BASE_PATH}}pages/case-studies.html">Case Studies</a>
+        </li>
+
+        <li>
+          <a href="{{BASE_PATH}}pages/market.html">Market</a>
+        </li>
+
+        <li>
+          <a href="{{BASE_PATH}}pages/resources.html">Resources</a>
+        </li>
+
+        <li>
+          <a href="{{BASE_PATH}}pages/contact.html">Contact</a>
         </li>
 
       </ul>
@@ -70,10 +77,14 @@
 
   <div class="dcg-mobile-menu" id="dcgMobileMenu">
 
-    <a href="#">Home</a>
-    <a href="#">About Us</a>
-    <a href="#">Opportunities</a>
-    <a href="#">Contact</a>
+    <a href="{{BASE_PATH}}index.html">Home</a>
+    <a href="{{BASE_PATH}}pages/about.html">About Us</a>
+    <a href="{{BASE_PATH}}pages/leadership.html">Leadership</a>
+    <a href="{{BASE_PATH}}pages/opportunities.html">Opportunities</a>
+    <a href="{{BASE_PATH}}pages/case-studies.html">Case Studies</a>
+    <a href="{{BASE_PATH}}pages/market.html">Market</a>
+    <a href="{{BASE_PATH}}pages/resources.html">Resources</a>
+    <a href="{{BASE_PATH}}pages/contact.html">Contact</a>
 
     <a href="#" class="dcg-mobile-btn">
       INVESTOR PORTAL

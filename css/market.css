@@ -1,0 +1,159 @@
+/* ============================================================
+   MARKET PAGE STYLES
+   ============================================================ */
+
+/* HERO SECTION */
+.dcg-market-hero {
+  padding: 200px 24px 100px;
+  background: radial-gradient(circle at top right, rgba(224, 164, 59, 0.08), transparent 40%),
+              linear-gradient(180deg, #020812 0%, #040c16 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.dcg-market-hero-label {
+  display: inline-block;
+  color: #e0a43b;
+  font-size: 11px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.dcg-market-hero-label::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: #e0a43b;
+  margin: 12px auto 0;
+  opacity: 0.6;
+}
+
+.dcg-market-hero-title {
+  font-family: "Playfair Display", serif;
+  font-size: 64px;
+  color: #fff;
+  margin: 0 0 24px 0;
+  line-height: 1.1;
+}
+
+.dcg-market-hero-title span {
+  color: #e0a43b;
+  font-style: italic;
+}
+
+.dcg-market-hero-text {
+  max-width: 700px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* CONTENT SECTION */
+.dcg-market-section {
+  padding: 100px 24px;
+  background-color: #040810;
+}
+
+.dcg-market-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* INFO BLOCK (Image + Text) */
+.dcg-market-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.dcg-market-block.reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.dcg-market-image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dcg-market-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: transform 0.5s ease;
+}
+
+.dcg-market-image:hover img {
+  transform: scale(1.05);
+}
+
+.dcg-market-content h2 {
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  margin: 0 0 24px 0;
+  line-height: 1.2;
+}
+
+.dcg-market-content p {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.dcg-market-stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dcg-market-stat-item h3 {
+  color: #e0a43b;
+  font-size: 32px;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+.dcg-market-stat-item p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .dcg-market-block,
+  .dcg-market-block.reverse {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .dcg-market-block.reverse .dcg-market-image {
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .dcg-market-hero {
+    padding: 160px 20px 80px;
+  }
+  .dcg-market-hero-title {
+    font-size: 42px;
+  }
+  .dcg-market-content h2 {
+    font-size: 28px;
+  }
+}

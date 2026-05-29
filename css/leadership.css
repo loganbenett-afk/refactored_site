@@ -1,0 +1,209 @@
+/* ============================================================
+   LEADERSHIP PAGE STYLES
+   ============================================================ */
+
+/* HERO SECTION */
+.dcg-leader-hero {
+  padding: 200px 24px 100px;
+  background: radial-gradient(circle at top right, rgba(224, 164, 59, 0.08), transparent 40%),
+              linear-gradient(180deg, #020812 0%, #040c16 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.dcg-leader-hero-label {
+  display: inline-block;
+  color: #e0a43b;
+  font-size: 11px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.dcg-leader-hero-label::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: #e0a43b;
+  margin: 12px auto 0;
+  opacity: 0.6;
+}
+
+.dcg-leader-hero-title {
+  font-family: "Playfair Display", serif;
+  font-size: 64px;
+  color: #fff;
+  margin: 0 0 24px 0;
+  line-height: 1.1;
+}
+
+.dcg-leader-hero-title span {
+  color: #e0a43b;
+  font-style: italic;
+}
+
+.dcg-leader-hero-text {
+  max-width: 700px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* TEAM GRID */
+.dcg-team-section {
+  padding: 100px 24px;
+  background-color: #040810;
+}
+
+.dcg-team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dcg-team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.dcg-team-member {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.dcg-team-member:hover {
+  transform: translateY(-8px);
+  border-color: rgba(224, 164, 59, 0.3);
+}
+
+.dcg-team-img-wrap {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #0a111a;
+  position: relative;
+  overflow: hidden;
+}
+
+.dcg-team-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.5s ease;
+}
+
+.dcg-team-member:hover .dcg-team-img-wrap img {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.dcg-team-info {
+  padding: 32px 24px;
+}
+
+.dcg-team-name {
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  margin: 0 0 8px 0;
+}
+
+.dcg-team-title {
+  color: #e0a43b;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 16px 0;
+  font-weight: 600;
+}
+
+.dcg-team-bio {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* PHILOSOPHY */
+.dcg-philosophy-section {
+  padding: 100px 24px;
+  background: #02050a;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dcg-philosophy-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.dcg-philosophy-title {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  color: #fff;
+  margin-bottom: 32px;
+}
+
+.dcg-philosophy-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 48px;
+}
+
+.dcg-phil-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.dcg-phil-item {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 40px 24px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.dcg-phil-icon {
+  color: #e0a43b;
+  margin-bottom: 24px;
+}
+
+.dcg-phil-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+.dcg-phil-item h4 {
+  color: #fff;
+  font-size: 18px;
+  margin: 0 0 12px 0;
+}
+
+.dcg-phil-item p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .dcg-leader-hero {
+    padding: 160px 20px 80px;
+  }
+  .dcg-leader-hero-title {
+    font-size: 42px;
+  }
+  .dcg-team-grid {
+    grid-template-columns: 1fr;
+  }
+  .dcg-phil-grid {
+    grid-template-columns: 1fr;
+  }
+}
