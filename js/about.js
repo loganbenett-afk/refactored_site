@@ -46,6 +46,75 @@ document.addEventListener("DOMContentLoaded", function(){
   observer.observe(document.querySelector(".dcg-cta-section"));
 });
 
+document.addEventListener("DOMContentLoaded", function(){
+  const top   = document.querySelector(".dcg-invest-top");
+  const cards = document.querySelectorAll(".dcg-invest-card");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if(entry.isIntersecting){
+        top.classList.add("active");
+        cards.forEach((card, index) => {
+          setTimeout(() => {
+            card.classList.add("active");
+          }, index * 100);
+        });
+      }
+    });
+  }, { threshold: 0.15 });
+  
+  const section = document.querySelector(".dcg-invest-section");
+  if (section) {
+    observer.observe(section);
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function(){
+  const top   = document.querySelector(".dcg-models-top");
+  const cards = document.querySelectorAll(".dcg-model-card");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if(entry.isIntersecting){
+        top.classList.add("active");
+        cards.forEach((card, index) => {
+          setTimeout(() => {
+            card.classList.add("active");
+          }, index * 120);
+        });
+      }
+    });
+  }, { threshold: 0.15 });
+  
+  const section = document.querySelector(".dcg-models-section");
+  if (section) {
+    observer.observe(section);
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function(){
+  const top   = document.querySelector(".dcg-how-top");
+  const cards = document.querySelectorAll(".dcg-how-column");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if(entry.isIntersecting){
+        top.classList.add("active");
+        cards.forEach((card, index) => {
+          setTimeout(() => {
+            card.classList.add("active");
+          }, index * 100);
+        });
+      }
+    });
+  }, { threshold: 0.15 });
+  
+  const section = document.querySelector(".dcg-how-it-works-section");
+  if (section) {
+    observer.observe(section);
+  }
+});
+
+
+
+
 fetch('footer.html')
     .then(r => r.text())
     .then(html => { document.getElementById('site-footer').innerHTML = html; })

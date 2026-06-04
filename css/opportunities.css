@@ -649,7 +649,7 @@ METRICS GRID
 ========================================= */
 .dcgNeoMetricsGridV11{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(3,1fr);
   gap:30px;
 }
 /* =========================================
@@ -716,7 +716,7 @@ TIMELINE
 }
 .dcgNeoTimelineLineV11{
   position:absolute;
-  left:46px;
+  left:42px;
   top:0;
   bottom:0;
   width:2px;
