@@ -25,3 +25,35 @@ img { max-width: 100%; display: block; }
 .dcg-reveal-delay-3 { transition-delay: 0.3s; }
 .dcg-reveal-delay-4 { transition-delay: 0.4s; }
 .dcg-reveal-delay-5 { transition-delay: 0.5s; }
+
+/* ── Scroll To Top Button ── */
+#dcgScrollTop {
+  position: fixed;
+  bottom: -60px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #916B1D;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+#dcgScrollTop:hover {
+  background: #A67B22;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(145,107,29,0.3);
+}
+#dcgScrollTop.dcg-scroll-top-visible {
+  bottom: 24px;
+  opacity: 1;
+  visibility: visible;
+}

@@ -7,7 +7,7 @@
 
     <a href="{{BASE_PATH}}index.html" class="dcg-logo-wrap">
       <img 
-        src="http://decadescapitalgroup.com/wp-content/uploads/2025/09/cropped-cropped-Decades-Capital-Group-Logo.png"
+        src="{{BASE_PATH}}images/logo.png"
         alt="Decades Capital Group"
         class="dcg-logo"
       >
@@ -57,7 +57,7 @@
 
     <!-- CTA -->
 
-    <a href="#" class="dcg-header-btn">
+    <a href="https://investor.avestorinc.com/decadescapital" target="_blank" rel="noopener noreferrer" class="dcg-header-btn">
       INVESTOR PORTAL
     </a>
 
@@ -86,7 +86,7 @@
     <a href="{{BASE_PATH}}pages/resources.html">Resources</a>
     <a href="{{BASE_PATH}}pages/contact.html">Contact</a>
 
-    <a href="#" class="dcg-mobile-btn">
+    <a href="https://investor.avestorinc.com/decadescapital" target="_blank" rel="noopener noreferrer" class="dcg-mobile-btn">
       INVESTOR PORTAL
     </a>
 
@@ -130,6 +130,7 @@
   background:transparent;
 
   transition:
+    transform .45s ease,
     background .45s ease,
     backdrop-filter .45s ease,
     padding .45s ease,
@@ -138,6 +139,12 @@
   padding:18px 0;
 
   border-bottom:1px solid rgba(255,255,255,0.08);
+  transform: translateY(0);
+}
+
+/* HIDE ON SCROLL DOWN */
+#dcgHeader.dcg-nav-hidden {
+  transform: translateY(-100%);
 }
 
 /* SCROLLED */
@@ -199,7 +206,7 @@
 #dcgHeader .dcg-nav-menu{
   display:flex;
   align-items:center;
-  gap:46px;
+  gap:24px;
 
   list-style:none;
   margin:0;
@@ -217,7 +224,7 @@
 
   text-decoration:none !important;
 
-  font-size:17px;
+  font-size:15px;
   font-weight:500;
   font-family:"Inter",sans-serif;
 
@@ -291,9 +298,9 @@
 
   text-decoration:none !important;
 
-  font-size:14px;
+  font-size:13px;
   font-weight:600;
-  letter-spacing:3px;
+  letter-spacing:2px;
 
   font-family:"Inter",sans-serif;
 
