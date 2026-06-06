@@ -1282,3 +1282,175 @@ MOBILE
   .dcs-cta { flex-direction: column; align-items: center; gap: 12px; }
   .dcs-btn { width: 100%; max-width: 300px; padding: 17px 28px; }
 }
+
+/* =========================
+   CASE STUDIES SECTION
+========================= */
+.dcg-case-studies-section {
+  position: relative;
+  overflow: hidden;
+  background: #111419;
+  padding: 110px 40px;
+  isolation: isolate;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.dcg-case-studies-container { max-width: 1200px; margin: 0 auto; }
+.dcg-case-studies-top { text-align: center; margin-bottom: 70px; }
+.dcg-case-studies-heading {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #a97e2f;
+}
+.dcg-case-studies-grid { display: flex; flex-direction: column; gap: 60px; }
+
+.dcg-case-study-row {
+  display: flex;
+  align-items: stretch;
+  gap: 30px;
+}
+
+.dcg-case-study-left {
+  flex: 0 0 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dcg-case-study-image {
+  position: relative;
+  width: 100%;
+}
+
+.dcg-carousel-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 8px;
+  border-radius: 4px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.dcg-carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.dcg-carousel-container img {
+  scroll-snap-align: start;
+  flex: 0 0 100%;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.dcg-carousel-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 10px;
+  pointer-events: none;
+}
+
+.dcg-carousel-btn {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: background 0.3s;
+}
+
+.dcg-carousel-btn:hover {
+  background: rgba(224, 164, 59, 0.8);
+}
+.dcg-case-study-content {
+  flex: 1;
+  background: #191c22;
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 40px 50px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dcg-case-study-content h3 {
+  margin: 0 0 24px;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.dcg-cs-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dcg-cs-list li {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+}
+
+.dcg-cs-list li strong {
+  color: #a97e2f;
+  font-weight: 500;
+  margin-right: 6px;
+  display: flex;
+  align-items: center;
+}
+
+/* Custom list icons logic based on screenshots: I'll use simple characters or standard icons if possible, but let's just stick to the text for now as it's cleaner without custom SVGs unless specified */
+
+.dcg-highlight-location {
+  background-color: #ff0055;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: white;
+}
+
+.dcg-cs-btn {
+  display: block;
+  background: #9a762c;
+  color: #ffffff;
+  padding: 16px 40px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+.dcg-cs-btn:hover { background: #b88d35; color: #fff; }
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+  .dcg-case-study-row { flex-direction: column; gap: 20px; }
+  .dcg-case-study-left { flex: auto; }
+  .dcg-case-study-image img { height: 260px; }
+  .dcg-case-study-content { padding: 30px; }
+}

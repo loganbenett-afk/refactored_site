@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>FAQ — Decades Capital Group</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&amp;family=Inter:wght@300;400;500;600&amp;family=Jost:wght@300;400;500;600&amp;display=swap" rel="stylesheet" />
+  <link href="../css/styles.css" rel="stylesheet" />
+  <style>
+    .dcg-faq-hero {
+      padding: 160px 40px 100px;
+      text-align: center;
+      background: #020913;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .dcg-faq-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(48px, 6vw, 72px);
+      color: #e0a43b;
+      margin-bottom: 20px;
+    }
+    .dcg-faq-hero p {
+      color: rgba(255,255,255,0.75);
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .dcg-faq-section {
+      padding: 100px 40px 80px;
+      background: #0a0f16;
+      min-height: 50vh;
+      color: #fff;
+    }
+    .dcg-faq-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .dcg-faq-category {
+      font-family: 'Inter', sans-serif;
+      font-size: 24px;
+      color: #a97e2f;
+      margin: 60px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid rgba(224,164,59,0.2);
+    }
+    .dcg-faq-category:first-child { margin-top: 0; }
+    
+    .dcg-faq-item {
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding: 24px 0;
+    }
+    .dcg-faq-question {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      color: #ffffff;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: color 0.3s;
+    }
+    .dcg-faq-question:hover {
+      color: #e0a43b;
+    }
+    .dcg-faq-answer {
+      font-family: 'Inter', sans-serif;
+      font-size: 15.5px;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.8;
+      margin-top: 16px;
+      display: none;
+    }
+    .dcg-faq-icon {
+      font-size: 24px;
+      color: #e0a43b;
+      transition: transform 0.3s;
+    }
+    .dcg-faq-item.active .dcg-faq-answer {
+      display: block;
+    }
+    .dcg-faq-item.active .dcg-faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .dcg-faq-cta {
+      padding: 100px 40px;
+      text-align: center;
+      background: #020913;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    .dcg-faq-cta h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .dcg-faq-cta p {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .dcg-faq-cta-btns {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .dcg-btn-primary {
+      background: #e0a43b;
+      color: #111;
+      padding: 16px 36px;
+      border-radius: 100px;
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 2px;
+      transition: transform 0.3s, background 0.3s;
+    }
+    .dcg-btn-primary:hover {
+      background: #b88d35;
+      transform: translateY(-2px);
+    }
+    .dcg-btn-outline {
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 16px 36px;
+      border-radius: 100px;
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 2px;
+      transition: background 0.3s, color 0.3s;
+    }
+    .dcg-btn-outline:hover {
+      background: #fff;
+      color: #111;
+    }
+
+    @media (max-width: 768px) {
+      .dcg-faq-section { padding: 80px 20px 60px; }
+      .dcg-faq-question { font-size: 16px; }
+      .dcg-faq-cta-btns { flex-direction: column; }
+    }
+  </style>
+</head>
+<body style="background: #111419;">
+  <div id="site-header"></div>
+
+  <!-- HERO -->
+  <section class="dcg-faq-hero">
+    <h1>Frequently Asked Questions</h1>
+    <p>Everything you need to know about investing with Decades Capital Group. Find answers regarding our strategies, distributions, and how to get started.</p>
+  </section>
+
+  <!-- FAQ ACCORDION -->
+  <section class="dcg-faq-section">
+    <div class="dcg-faq-container">
+      
+      <!-- Category 1 -->
+      <h2 class="dcg-faq-category">Investment Strategies</h2>
+      <div class="dcg-faq-list">
+        <div class="dcg-faq-item">
+          <div class="dcg-faq-question">What is Decades Capital Group and what do you specialize in? <span class="dcg-faq-icon">+</span></div>
+          <div class="dcg-faq-answer">Decades Capital Group is a hospitality-focused real estate investment firm that gives investors access to hotel investments through two strategies: a Growth Equity Model (development-focused) and an Income Fund Model (cash flow-focused). The goal is building generational wealth through the hospitality sector.</div>
+        </div>
+        <div class="dcg-faq-item">
+          <div class="dcg-faq-question">What's the difference between the Growth Equity and Income Fund models? <span class="dcg-faq-icon">+</span></div>
+          <div class="dcg-faq-answer">The Growth Equity Model focuses on ground-up hotel development with equity upside, strong tax advantages, and higher return targets (20–30% IRR) over 3–5 years. The Income Fund Model acquires stabilized, branded hotels that are already generating revenue — better suited for investors who want predictable monthly income with lower risk.</div>
+        </div>
+        <div class="dcg-faq-item">
+          <div class="dcg-faq-question">What returns can I expect? <span class="dcg-faq-icon">+</span></div>
+          <div class="dcg-faq-answer">That depends on which strategy you choose. The Income Fund Model targets 10–12% annualized preferred returns paid monthly. The Growth Equity (development) model targets IRRs of 20–30% over a typical 3–5 year hold period.</div>
+        </div>
+        <div class="dcg-faq-item">
+          <div class="dcg-faq-question">How often will I receive distributions? <span class="dcg-faq-icon">+</span></div>
+          <div class="dcg-faq-answer">For the Income Fund (stabilized hotel) strategy, distributions are paid monthly via direct deposit, though they are marketed on a quarterly basis for simplicity.</div>
+        </div>
+      </div>
+
+      <!-- Category 2 -->
+      <h2 class="dcg-faq-category">Eligibility & Getting Started</h2>
+      <div class="dcg-faq-list">
+        <div class="dcg-faq-item">
+          <div class="dcg-faq-question">Do I need to be an accredited investor to participate? <span class="dcg-faq-icon">+</span></div>
+          <div class="dcg-faq-answer">Yes. Based on your intake form, accredited investor status is required. This is standard for private real estate offerings under SEC Regulation D. If you're unsure whether you qualify, we recommend speaking with a financial advisor before applying.</div>
+        </div>
+        <div class="dcg-faq-item">
+          <div class="dcg-faq-question">What is the minimum investment amount? <span class="dcg-faq-icon">+</span></div>
+          <div class="dcg-faq-answer">The site doesn't currently list a minimum. The best way to get this answer is to book a private call or reach out directly at (678) 978-7222.</div>
+        </div>
+        <div class="dcg-faq-item">
+          <div class="dcg-faq-question">How do I get started? <span class="dcg-faq-icon">+</span></div>
+          <div class="dcg-faq-answer">There are two ways: fill out the short investor intake form on the website to join the Investor Network and receive early deal access, or call the team directly at (678) 978-7222 to have a deeper conversation about which strategy fits your goals.</div>
+        </div>
+      </div>
+
+      <!-- Category 3 -->
+      <h2 class="dcg-faq-category">Operations & Details</h2>
+      <div class="dcg-faq-list">
+        <div class="dcg-faq-item">
+          <div class="dcg-faq-question">What hotel brands do you work with? <span class="dcg-faq-icon">+</span></div>
+          <div class="dcg-faq-answer">Decades Capital Group has established relationships with major hospitality brands including Hilton, Marriott, Hyatt, and IHG. Current featured properties include a Motel 6 in Las Vegas and a Marriott Courtyard in Plano, TX.</div>
+        </div>
+        <div class="dcg-faq-item">
+          <div class="dcg-faq-question">What are the tax benefits of hotel investing? <span class="dcg-faq-icon">+</span></div>
+          <div class="dcg-faq-answer">Hotel investments can offer meaningful tax advantages including depreciation, bonus depreciation, and cost segregation — which can significantly offset taxable income. We recommend consulting your CPA to understand how these benefits apply to your specific situation.</div>
+        </div>
+        <div class="dcg-faq-item">
+          <div class="dcg-faq-question">How long is my capital typically locked up? <span class="dcg-faq-icon">+</span></div>
+          <div class="dcg-faq-answer">Hold periods vary by strategy. The Income Fund model typically runs 2–3 years, while the Growth Equity (development) model runs 3–5 years. These are illiquid investments, meaning capital is not freely redeemable during the hold period.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="dcg-faq-cta">
+    <h2>Still have questions?</h2>
+    <p>If you couldn't find the answer you were looking for, our team is ready to help you navigate your investment journey.</p>
+    <div class="dcg-faq-cta-btns">
+      <a href="contact.html" class="dcg-btn-primary">GET IN TOUCH</a>
+      <a href="tel:+16789787222" class="dcg-btn-outline">CALL (678) 978-7222</a>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="../js/script.js"></script>
+  <script>
+    document.querySelectorAll('.dcg-faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
